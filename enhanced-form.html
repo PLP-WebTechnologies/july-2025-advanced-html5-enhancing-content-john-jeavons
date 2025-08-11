@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form Example</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Enhanced HTML5 Form Example</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#info">Information</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form">Registration Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="info">
+            <h2>Why Use Enhanced Forms?</h2>
+            <ul>
+                <li>Improved user experience with validation and autocomplete</li>
+                <li>Better accessibility and semantic structure</li>
+                <li>Modern input types for richer data collection</li>
+            </ul>
+            <table aria-label="Form Field Examples">
+                <caption>Common HTML5 Input Types</caption>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Example</th>
+                        <th>Validation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Email</td>
+                        <td><code>&lt;input type="email"&gt;</code></td>
+                        <td>Checks for valid email format</td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td><code>&lt;input type="number"&gt;</code></td>
+                        <td>Allows only numeric input</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td><code>&lt;input type="date"&gt;</code></td>
+                        <td>Calendar picker, date range</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="media">
+            <h2>Sample Media</h2>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Nature landscape">
+            <video controls width="400">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section id="form">
+            <h2>Registration Form</h2>
+            <form action="#" method="post" autocomplete="on" aria-labelledby="form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required autocomplete="name">
+
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" min="1900-01-01" max="2025-12-31" autocomplete="bday">
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" autocomplete="tel">
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required autocomplete="country">
+                        <option value="">Select your country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <label for="username">Username <span aria-hidden="true">*</span></label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="4" maxlength="16" autocomplete="username">
+
+                    <label for="password">Password <span aria-hidden="true">*</span></label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8" autocomplete="new-password">
+
+                    <label for="confirm-password">Confirm Password <span aria-hidden="true">*</span></label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required minlength="8" autocomplete="new-password">
+
+                    <label for="referral">Referral Code</label>
+                    <input type="text" id="referral" name="referral" value="SUMMER25" readonly class="readonly">
+                </fieldset>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes" checked>
+                        Subscribe to newsletter
+                    </label>
+                    <label>
+                        <input type="radio" name="contact" value="email" checked>
+                        Contact me by Email
+                    </label>
+                    <label>
+                        <input type="radio" name="contact" value="phone">
+                        Contact me by Phone
+                    </label>
+                    <label for="bio">Short Bio</label>
+                    <textarea id="bio" name="bio" rows="3" maxlength="250" placeholder="Tell us a little about yourself..."></textarea>
+                </fieldset>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Enhanced Form Example. All rights reserved.</p>
